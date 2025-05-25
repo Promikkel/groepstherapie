@@ -4,58 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groepstherapie – Pinksteren 2025</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="title">Groepstherapie</h1>
-            <h2 class="subtitle">Pinksteren 2025</h2>
-            <h3 class="location">De Witte Boerderij – Drouwenermond</h3>
-            <p class="dates">6 t/m 9 juni 2025</p>
+            <h1 class="festival-title">Groepstherapie</h1>
+            <h2 class="festival-subtitle">Pinksteren 2025</h2>
+            <p class="festival-date">6 t/m 9 juni</p>
+            <p class="festival-location">De Witte Boerderij – Drouwenermond</p>
         </div>
     </header>
 
-    <section class="intro">
+    <nav class="day-navigation">
         <div class="container">
-            <p>Welkom bij Groepstherapie – de enige therapie waar je elke avond eindigt in een bubbelbad, karaoke of GTST-marathon. Check het programma, laat weten waar je zin in hebt en like je favoriete activiteiten. Alles mag, niks moet – behalve genieten.</p>
-        </div>
-    </section>
-
-    <nav class="day-nav">
-        <div class="container">
-            <ul>
-                <li><a href="#vrijdag" class="active">Vrijdag</a></li>
-                <li><a href="#zaterdag">Zaterdag</a></li>
-                <li><a href="#zondag">Zondag</a></li>
-                <li><a href="#maandag">Maandag</a></li>
-                <li><a href="#bioscoop">Bioscoop</a></li>
-                <li><a href="#locatie">Locatie</a></li>
-            </ul>
+            <button class="day-button active" data-day="vrijdag">Vrijdag</button>
+            <button class="day-button" data-day="zaterdag">Zaterdag</button>
+            <button class="day-button" data-day="zondag">Zondag</button>
+            <button class="day-button" data-day="maandag">Maandag</button>
+            <button class="day-button" data-day="bios">Bios</button>
         </div>
     </nav>
 
     <main>
-        <!-- VRIJDAG -->
-        <section id="vrijdag" class="day-section" data-day="vrijdag">
-            <div class="container">
+        <div class="container">
+            <section id="top-activities" class="top-activities">
+                <h2>Top 5 Populairste Activiteiten</h2>
+                <div class="progress-container">
+                    <!-- Top activiteiten worden hier dynamisch ingevuld -->
+                </div>
+            </section>
+
+            <section id="vrijdag" class="day-section active">
                 <h2 class="day-title">Vrijdag 6 juni – Aankomst & Tapas</h2>
                 
                 <div class="activity-card">
                     <div class="activity-time">18:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-utensils"></i> Tapasavond</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Tapasavond</h3>
+                            <div class="activity-icon">🍢</div>
+                        </div>
                         <p class="activity-description">We trappen het weekend af met een borrelplank waar je u tegen zegt. Iedereen neemt wat mee – tapas style!</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="tapasavond"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="tapasavond">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="tapasavond">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="tapasavond">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -65,42 +68,49 @@
                 <div class="activity-card">
                     <div class="activity-time">21:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-music"></i> Hitster</h3>
-                        <p class="activity-description">Muziekspel waarin je moet raden van wanneer een nummer is.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="hitster"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Hitster</h3>
+                            <div class="activity-icon">🎵</div>
+                        </div>
+                        <p class="activity-description">Muziekspel waarin je moet raden wat je allang zong.</p>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="hitster">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="hitster">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="hitster">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ZATERDAG -->
-        <section id="zaterdag" class="day-section" data-day="zaterdag">
-            <div class="container">
+            <section id="zaterdag" class="day-section">
                 <h2 class="day-title">Zaterdag 7 juni – Actie & Spel</h2>
                 
                 <div class="activity-card">
                     <div class="activity-time">09:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-cookie"></i> Pancakes & more</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Pancakes & more</h3>
+                            <div class="activity-icon">🥞</div>
+                        </div>
                         <p class="activity-description">Ontbijtklassieker met een luchtige bodem en een gouden randje.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="pancakes-zaterdag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="pancakes-zaterdag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="pancakes-zaterdag">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="pancakes-zaterdag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -110,16 +120,21 @@
                 <div class="activity-card">
                     <div class="activity-time">10:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-futbol"></i> Voetbaltraining</h3>
-                        <p class="activity-description">Balgevoel of niet, op het veld zijn we allemaal prof.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="voetbaltraining"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Voetbaltraining</h3>
+                            <div class="activity-icon">⚽</div>
+                        </div>
+                        <p class="activity-description">Balgevoel of niet, op het veld zijn we allemaal prof. Of niet.</p>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="voetbaltraining">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="voetbaltraining">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="voetbaltraining">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -129,16 +144,21 @@
                 <div class="activity-card">
                     <div class="activity-time">10:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-trophy"></i> Voetbaltoernooi</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Voetbaltoernooi</h3>
+                            <div class="activity-icon">🏆</div>
+                        </div>
                         <p class="activity-description">Teams, shirts, zweet en glorie. Of schrammen.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="voetbaltoernooi"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="voetbaltoernooi">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="voetbaltoernooi">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="voetbaltoernooi">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -148,16 +168,21 @@
                 <div class="activity-card">
                     <div class="activity-time">12:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-pizza-slice"></i> Pizza-middag</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Pizza-middag</h3>
+                            <div class="activity-icon">🍕</div>
+                        </div>
                         <p class="activity-description">Buitenlucht + Italiaanse deegkunst = topcombo.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="pizza-middag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="pizza-middag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="pizza-middag">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="pizza-middag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -167,16 +192,21 @@
                 <div class="activity-card">
                     <div class="activity-time">14:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-water"></i> Watertrefbal (in het zwembad)</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Watertrefbal (in het zwembad)</h3>
+                            <div class="activity-icon">🏊</div>
+                        </div>
                         <p class="activity-description">Nat, chaotisch en gegarandeerd vol fanatisme. Wie overleeft de plonsronde?</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="watertrefbal"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="watertrefbal">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="watertrefbal">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="watertrefbal">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -186,16 +216,21 @@
                 <div class="activity-card">
                     <div class="activity-time">15:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-medal"></i> De Alleskunner</h3>
-                        <p class="activity-description">Mini-challenges in hoog tempo. Geen stress, wel sensatie.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="alleskunner-zaterdag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">De Alleskunner</h3>
+                            <div class="activity-icon">🏅</div>
+                        </div>
+                        <p class="activity-description">Mini-challenges in hoog tempo. Geen stress, wel sensatie. Backspin vs. bierbuik.</p>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="alleskunner">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="alleskunner">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="alleskunner">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -205,16 +240,21 @@
                 <div class="activity-card">
                     <div class="activity-time">18:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-drumstick-bite"></i> BBQ Bingo</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">BBQ Bingo</h3>
+                            <div class="activity-icon">🍖</div>
+                        </div>
                         <p class="activity-description">Lekker vleesje. Vette prijzen.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="bbq-bingo"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="bbq-bingo">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="bbq-bingo">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="bbq-bingo">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -224,16 +264,21 @@
                 <div class="activity-card">
                     <div class="activity-time">20:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-microphone"></i> Karaoke</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Karaoke</h3>
+                            <div class="activity-icon">🎤</div>
+                        </div>
                         <p class="activity-description">Alles mag. Niks is vals als je het met gevoel brengt.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="karaoke"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="karaoke">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="karaoke">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="karaoke">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -243,42 +288,49 @@
                 <div class="activity-card">
                     <div class="activity-time">22:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-hourglass-half"></i> 30 Seconds Toernooi</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">30 Seconds Toernooi</h3>
+                            <div class="activity-icon">⏱️</div>
+                        </div>
                         <p class="activity-description">Teams, chaos en misverstanden.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="30-seconds"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="30-seconds">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="30-seconds">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="30-seconds">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ZONDAG -->
-        <section id="zondag" class="day-section" data-day="zondag">
-            <div class="container">
-                <h2 class="day-title">Zondag 8 juni – Games & De Alleskunner</h2>
+            <section id="zondag" class="day-section">
+                <h2 class="day-title">Zondag 8 juni – Games & Specials</h2>
                 
                 <div class="activity-card">
                     <div class="activity-time">08:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-running"></i> Hardlopen</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Hardlopen</h3>
+                            <div class="activity-icon">🏃</div>
+                        </div>
                         <p class="activity-description">Frisse start van de dag met een rondje rennen.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="hardlopen"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="hardlopen">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="hardlopen">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="hardlopen">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -288,54 +340,69 @@
                 <div class="activity-card">
                     <div class="activity-time">09:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-cookie"></i> Pancakes & more</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Pancakes & more</h3>
+                            <div class="activity-icon">🥞</div>
+                        </div>
                         <p class="activity-description">Zelfde recept, andere vibe. Zoet, luchtig en sociaal.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="pancakes-zondag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="pancakes-zondag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="pancakes-zondag">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="pancakes-zondag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card special-card">
                     <div class="activity-time">11:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-birthday-cake"></i> Verjaardag Mike 🎉</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Verjaardag Mike 🎉</h3>
+                            <div class="activity-icon">🎂</div>
+                        </div>
                         <p class="activity-description">Taart, slingers en misschien een verrassingsactie. Mike 100% in het zonnetje.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="verjaardag-mike"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="verjaardag-mike">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="verjaardag-mike">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="verjaardag-mike">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="activity-card">
-                    <div class="activity-time">13:00</div>
+                <div class="activity-card special-card">
+                    <div class="activity-time">12:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-water"></i> Waterpark (DX adventurepark)</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Waterpark (DX Adventurepark) 💦</h3>
+                            <div class="activity-icon">🏄</div>
+                        </div>
                         <p class="activity-description">Klimmen, springen, vliegen en plonsen op het water. Vergeet je zwembroek niet – dit wordt nat en legendarisch.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="waterpark"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="waterpark">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="waterpark">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="waterpark">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -345,16 +412,21 @@
                 <div class="activity-card">
                     <div class="activity-time">16:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-bullseye"></i> Jeu de boules</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Jeu de boules</h3>
+                            <div class="activity-icon">🎯</div>
+                        </div>
                         <p class="activity-description">Petanque met flair. Breng je eigen zonnehoed.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="jeu-de-boules"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="jeu-de-boules">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="jeu-de-boules">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="jeu-de-boules">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -364,16 +436,21 @@
                 <div class="activity-card">
                     <div class="activity-time">16:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-table-tennis"></i> Tafeltennis Toernooi</h3>
-                        <p class="activity-description">Backspin vs. bierbuik.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="tafeltennis"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Tafeltennis Toernooi</h3>
+                            <div class="activity-icon">🏓</div>
+                        </div>
+                        <p class="activity-description">Ping pong op het hoogste niveau.</p>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="tafeltennis">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="tafeltennis">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="tafeltennis">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -383,16 +460,21 @@
                 <div class="activity-card">
                     <div class="activity-time">18:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-utensils"></i> Gourmetavond</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Gourmetavond</h3>
+                            <div class="activity-icon">🍳</div>
+                        </div>
                         <p class="activity-description">Sissende plaatjes, knorrende magen, volle tafels.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="gourmetavond"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="gourmetavond">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="gourmetavond">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="gourmetavond">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -402,42 +484,49 @@
                 <div class="activity-card">
                     <div class="activity-time">20:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-question-circle"></i> Quiz</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Quiz</h3>
+                            <div class="activity-icon">🤔</div>
+                        </div>
                         <p class="activity-description">Strijd om de slimste, maar vooral wie het hardst bluft. Vragen, gokken, ego's op het spel.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="quiz"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="quiz">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="quiz">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="quiz">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- MAANDAG -->
-        <section id="maandag" class="day-section" data-day="maandag">
-            <div class="container">
-                <h2 class="day-title">Maandag 9 juni</h2>
+            <section id="maandag" class="day-section">
+                <h2 class="day-title">Maandag 9 juni – Lazy Wrap-up</h2>
                 
                 <div class="activity-card">
                     <div class="activity-time">09:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-bread-slice"></i> Lazy breakfast</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Lazy breakfast</h3>
+                            <div class="activity-icon">🍳</div>
+                        </div>
                         <p class="activity-description">Restjes, tosti's, wat je ook kunt vinden.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="lazy-breakfast"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="lazy-breakfast">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="lazy-breakfast">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="lazy-breakfast">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -447,43 +536,50 @@
                 <div class="activity-card">
                     <div class="activity-time">11:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-hands-helping"></i> Afscheid & grouphug</h3>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Afscheid & grouphug</h3>
+                            <div class="activity-icon">🤗</div>
+                        </div>
                         <p class="activity-description">Knuffels, blikken, beloften voor volgend jaar.</p>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="afscheid"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="afscheid">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="afscheid">
+                                <button class="join-button">Ik doe mee!</button>
+                                <div class="participants-list" data-activity="afscheid">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- BIOSCOOP -->
-        <section id="bioscoop" class="day-section" data-day="bioscoop">
-            <div class="container">
+            <section id="bios" class="day-section">
                 <h2 class="day-title">Bioscoopagenda – Groepstherapie Bios</h2>
-                <p class="bioscoop-intro">Locatie: privébioscoop De Witte Boerderij – popcorn niet verplicht, chillen wel.</p>
+                <p class="bios-location">Locatie: privébioscoop De Witte Boerderij – popcorn niet verplicht, chillen wel.</p>
                 
-                <h3 class="cinema-day">Vrijdag</h3>
+                <h3 class="bios-day">Vrijdag</h3>
                 <div class="activity-card">
                     <div class="activity-time">20:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Minions (kidsfilm)</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-minions"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Minions (kidsfilm)</h3>
+                            <div class="activity-icon">🍿</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="minions">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="minions">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="minions">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -493,15 +589,20 @@
                 <div class="activity-card">
                     <div class="activity-time">23:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Vrije keuze / chillmuziek / karaoke overflow</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-vrije-keuze-vrijdag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Vrije keuze / chillmuziek / karaoke overflow</h3>
+                            <div class="activity-icon">🎵</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="vrije-keuze-vrijdag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="vrije-keuze-vrijdag">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="vrije-keuze-vrijdag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -511,34 +612,44 @@
                 <div class="activity-card">
                     <div class="activity-time">00:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> GTST Nachteditie</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-gtst"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">GTST Nachteditie</h3>
+                            <div class="activity-icon">📺</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="gtst">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="gtst">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="gtst">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="cinema-day">Zaterdag</h3>
+                <h3 class="bios-day">Zaterdag</h3>
                 <div class="activity-card">
                     <div class="activity-time">14:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Back to the Future</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-back-to-future"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Back to the Future</h3>
+                            <div class="activity-icon">🚗</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="back-to-future">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="back-to-future">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="back-to-future">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -548,15 +659,20 @@
                 <div class="activity-card">
                     <div class="activity-time">16:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Jurassic Park</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-jurassic-park"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Jurassic Park</h3>
+                            <div class="activity-icon">🦖</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="jurassic-park">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="jurassic-park">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="jurassic-park">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -566,15 +682,20 @@
                 <div class="activity-card">
                     <div class="activity-time">21:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-gamepad"></i> Fortnite Live event</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="fortnite-zaterdag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Fortnite Live Event</h3>
+                            <div class="activity-icon">🎮</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="fortnite-zaterdag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="fortnite-zaterdag">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="fortnite-zaterdag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -584,34 +705,44 @@
                 <div class="activity-card">
                     <div class="activity-time">00:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> The Substance</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-substance"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">The Substance</h3>
+                            <div class="activity-icon">🧪</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="the-substance">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="the-substance">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="the-substance">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <h3 class="cinema-day">Zondag</h3>
+                <h3 class="bios-day">Zondag</h3>
                 <div class="activity-card">
                     <div class="activity-time">11:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> The Lion King (origineel)</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-lion-king"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">The Lion King (origineel)</h3>
+                            <div class="activity-icon">🦁</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="lion-king">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="lion-king">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="lion-king">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -621,15 +752,20 @@
                 <div class="activity-card">
                     <div class="activity-time">13:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-gamepad"></i> Fortnite Live Event</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="fortnite-zondag"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Fortnite Live Event</h3>
+                            <div class="activity-icon">🎮</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="fortnite-zondag">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="fortnite-zondag">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="fortnite-zondag">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -639,15 +775,20 @@
                 <div class="activity-card">
                     <div class="activity-time">14:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-gamepad"></i> Tetris Challenge</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="tetris-challenge"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Tetris Challenge</h3>
+                            <div class="activity-icon">🎮</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="tetris">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="tetris">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="tetris">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -657,15 +798,20 @@
                 <div class="activity-card">
                     <div class="activity-time">15:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-gamepad"></i> FIFA Tournament</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="fifa-tournament"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">FIFA Tournament</h3>
+                            <div class="activity-icon">⚽</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="fifa">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="fifa">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="fifa">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -675,15 +821,20 @@
                 <div class="activity-card">
                     <div class="activity-time">16:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Ace Ventura: Pet Detective</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-ace-ventura"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Ace Ventura: Pet Detective</h3>
+                            <div class="activity-icon">🐶</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="ace-ventura">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="ace-ventura">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="ace-ventura">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -693,15 +844,20 @@
                 <div class="activity-card">
                     <div class="activity-time">20:30</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Pulp Fiction</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-pulp-fiction"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Pulp Fiction</h3>
+                            <div class="activity-icon">🔫</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="pulp-fiction">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="pulp-fiction">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="pulp-fiction">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -711,15 +867,20 @@
                 <div class="activity-card">
                     <div class="activity-time">22:45</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> Irreversible</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-irreversible"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">Irreversible</h3>
+                            <div class="activity-icon">🎬</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="irreversible">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="irreversible">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="irreversible">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
@@ -729,57 +890,41 @@
                 <div class="activity-card">
                     <div class="activity-time">00:00</div>
                     <div class="activity-content">
-                        <h3 class="activity-title"><i class="fas fa-film"></i> The Matrix</h3>
-                        <div class="activity-actions">
-                            <button class="like-btn" data-activity="film-matrix"><i class="fas fa-heart"></i> <span class="like-count">0</span></button>
-                            <div class="signup-container">
-                                <button class="signup-toggle">Aanmelden <i class="fas fa-chevron-down"></i></button>
-                                <div class="signup-form">
-                                    <input type="text" placeholder="Jouw naam" class="signup-input">
-                                    <button class="signup-btn">Aanmelden</button>
-                                    <div class="participants"></div>
+                        <div class="activity-header">
+                            <h3 class="activity-title">The Matrix</h3>
+                            <div class="activity-icon">💊</div>
+                        </div>
+                        <div class="activity-interaction">
+                            <button class="like-button" data-activity="matrix">
+                                <span class="heart-icon">❤️</span>
+                                <span class="like-count">0</span>
+                            </button>
+                            <div class="participants-section">
+                                <input type="text" class="name-input" placeholder="Jouw naam" data-activity="matrix">
+                                <button class="join-button">Ik kijk mee!</button>
+                                <div class="participants-list" data-activity="matrix">
+                                    <!-- Deelnemers worden hier dynamisch ingevuld -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- LOCATIE -->
-        <section id="locatie" class="day-section" data-day="locatie">
-            <div class="container">
-                <h2 class="day-title">De Witte Boerderij – Drouwenermond</h2>
-                
-                <div class="location-details">
-                    <div class="location-features">
-                        <ul>
-                            <li><i class="fas fa-bed"></i> 8 slaapkamers, 7 badkamers met Rituals</li>
-                            <li><i class="fas fa-film"></i> Privé bioscoop, zwembad, whirlpool</li>
-                            <li><i class="fas fa-glass-cheers"></i> Veranda met haard, bar, tuin & ezels</li>
-                            <li><i class="fas fa-spa"></i> Perfect voor ontspanning, chaos en groepsprocessen</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="location-address">
-                        <p><i class="fas fa-map-marker-alt"></i> Adres: Noorderblokken 14, 9523 TK Drouwenermond</p>
-                        <p><i class="fas fa-info-circle"></i> Meer info: <a href="https://luxevakantiewoningendrenthe.nl/witte-boerderij" target="_blank">luxevakantiewoningendrenthe.nl/witte-boerderij</a></p>
-                    </div>
-                    
-                    <div class="location-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2402.0440456855463!2d6.8975029!3d52.9728611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c82c5a7f705555%3A0x2b9e7d2d4f79c986!2sNoorderblokken%2014%2C%209523%20TK%20Drouwenermond!5e0!3m2!1snl!2snl!4v1653644547693!5m2!1snl!2snl" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>Groepstherapie – Pinksteren 2025 | 6 t/m 9 juni | De Witte Boerderij – Drouwenermond</p>
+            <p>Groepstherapie – Pinksteren 2025</p>
+            <p>De Witte Boerderij – Drouwenermond</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
